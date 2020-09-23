@@ -1099,6 +1099,10 @@ body{
 
         .third_img{
           width: 410px;
+
+          @include pc{
+            width: 350px;
+          }
           
 
           @include tab{
@@ -1903,9 +1907,11 @@ body{
   background-color: rgb(236, 244, 248);
   background-image: url(../img/background.png);
   background-position: center;
+  background-size: 100%;
   padding-bottom: 120px;
 
   @include sp{
+    background-image: url(../img/background_sp.png);
     padding-bottom: 53px;
     padding-top: 53px;
   }

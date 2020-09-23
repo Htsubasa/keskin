@@ -1584,6 +1584,12 @@ html body .product .third_process .third_image_block .third_img {
   width: 410px;
 }
 
+@media (max-width: 1050px) {
+  html body .product .third_process .third_image_block .third_img {
+    width: 350px;
+  }
+}
+
 @media (max-width: 768px) {
   html body .product .third_process .third_image_block .third_img {
     width: 260px;
@@ -2490,6 +2496,7 @@ html body .question {
   background-color: #ecf4f8;
   background-image: url(../img/background.png);
   background-position: center;
+  background-size: 100%;
   padding-bottom: 120px;
   /*h2*/
   /*block*/
@@ -2497,6 +2504,7 @@ html body .question {
 
 @media (max-width: 560px) {
   html body .question {
+    background-image: url(../img/background_sp.png);
     padding-bottom: 53px;
     padding-top: 53px;
   }
