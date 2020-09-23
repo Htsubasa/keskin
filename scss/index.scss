@@ -1,0 +1,1925 @@
+@charset "utf-8";
+@import "reset";
+
+
+$pc: 1050px; // PC
+$tab: 768px; // タブレット
+$sp: 560px;  // スマホ
+$sp-second: 425px;  // スマホ
+
+@mixin pc {
+  @media (max-width: ($pc)) {
+    @content;
+  }
+}
+
+
+@mixin tab {
+  @media (max-width: ($tab)) {
+    @content;
+  }
+}
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
+
+@mixin sp-second {
+    @media (max-width: ($sp-second)) {
+      @content;
+    }
+  }
+
+  @mixin h2 {
+    color: rgb(65, 104, 165);
+    text-align: center;
+    font-size: 48px;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 900;
+  }
+
+
+html{
+body{
+  font-family: 'Noto Sans JP', sans-serif;
+
+  header{
+    height: 90px;
+
+    @include sp{
+      height: 60px;
+    }
+    
+
+    .inner{
+      max-width: 1320px;
+      width: 100%;
+      display: flex;
+      margin: 0 auto;
+      justify-content: space-between;
+      padding: 15px 15px;
+      align-items: center;
+
+      img{
+        width: 155px;
+        height: 47px;
+
+        @include sp{
+          width: 108px;
+          height: 33px;
+        }
+      }
+
+
+    .btn{
+        width: 255px;
+        text-align: center;
+        border-radius: 7.5px;
+        box-shadow: 2px 2px 6px rgb(187, 187, 187);
+        background-color:  rgb(65, 104, 165);
+        height: 60px;
+
+        @include tab{
+          width: 210px;
+        }
+
+        @include sp{
+          width: 167px;
+          height: 37px;
+        }
+
+
+        a{
+          padding-top: 16px;
+          padding-bottom: 16px;
+            display: block;  
+            width: 100%;
+            font-size: 18px;
+            color: white;
+
+            @include tab{
+              padding-top: 20px;
+              font-size: 14px;
+            }
+
+            @include sp{
+              padding-top: 10px;
+              font-size: 12px;
+            }
+  
+
+        }/*a*/
+  
+    }
+
+    .btn:hover{
+      opacity: 0.9;
+      transition: .5s;
+
+      a:hover{
+        opacity: 0.7;
+        transition: .5s;
+      }
+
+    }
+
+
+    }/*inner*/
+  }/*header*/
+
+  .mainvisual{
+    background-image: url(../img/main_visual.png);
+    background-size: 100%;
+    height: 610px;
+    position: relative;
+    width: 100%;
+
+    @include pc{
+      height: 50vw;
+    }
+
+    @include sp{
+      background-image: url(../img/sp_main_visual.png);
+      height: 200vw;
+    }
+
+    &_wrap{
+      max-width: 1440px;
+      width: 80%;
+      padding-top: 125px;
+      margin: 0 auto;
+
+      @include pc{
+        padding-top: 40px;
+      }
+
+      @include tab{
+        width: 90%;
+      }
+
+
+    h1{
+      font-size: 36px;
+      color: white;
+
+      @include pc{
+        font-size: 30px;
+      }
+
+      @include tab{
+        font-size: 3.4vw;
+      }
+
+      @include sp(){
+        font-size: 6.4vw;
+      }
+
+
+      .yellow_title{
+        display: block;
+        font-size: 60px;
+        color: rgb(255, 215, 0);
+
+         @include pc{
+        font-size: 50px;
+      }
+
+      @include tab{
+        font-size: 5vw;
+      }
+
+      @include sp(){
+        font-size: 12.5vw;
+      }
+
+      }/*title*/
+    }/*h1*/
+
+    img{
+      @include tab{
+        width: 45vw;
+      }
+
+      @include sp(){
+        width: 90vw;
+      }
+    }
+
+    }/*wrap*/
+
+
+
+    .bubble{
+      position: absolute;
+      top: 120px;
+      right: 10px;
+    }
+
+    
+  }/*mainvisual*/
+
+  .recruit{
+    background-image: url(../img/bubble_background.png);
+    background-size: cover;
+    padding-bottom: 120px;
+    text-align: center;
+    padding-top:90px;
+
+   
+
+    h2{
+      font-size: 40px;
+      color: rgb(255, 215, 0);
+      border-bottom: 5px solid rgb(255, 215, 0);
+      display: inline-block;
+      margin-bottom: 30px;
+
+      @include sp{
+        font-size: 30px;
+      }
+
+      @include sp-second(){
+        font-size: 21px;
+      }
+    }
+
+    h3{
+      font-size: 25px;
+      font-weight: bold;
+      color: white;
+      margin-bottom: 50px;
+
+
+      @include sp{
+        font-size: 20px;
+      }
+
+      @include sp-second(){
+        font-size: 15px;
+      }
+
+    }
+
+    .logo-en{
+      width: 506px;
+      height: 165px;
+      margin-bottom: 40px;
+
+
+      @include sp{
+        width: 420px;
+        height: 120px;
+      }
+
+      @include sp-second(){
+        width: 300px;
+        height: 90px;
+      }
+
+
+    }
+
+    .fc_title{
+      font-size: 30px;
+      font-weight: bold;
+      color: white;
+
+     
+      @include sp{
+        font-size: 20px;
+      }
+
+      @include sp-second(){
+        font-size: 15px;
+      }
+
+    }
+
+
+    &_block{
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 0 auto;
+      width:1050px;
+
+      @include pc{
+        width: 740px;
+      }
+
+      @include pc{
+        max-width: 740px;
+        width: 95%;
+      }
+
+      .recruit_item{
+        background-color: white;
+        width: 317px;
+        text-align: center;
+        border-radius: 10px;
+        margin-right: 12.5px;
+        margin-left: 12.5px;
+        padding-bottom: 35px;
+        margin-top: 25px;
+
+        @include tab{
+          width:260px;
+        }
+
+        @include sp{
+          width: 89%;
+        }
+
+        .sub-line{
+          color:  rgb(65, 104, 165);
+          font-size: 14px;
+          font-weight: bold;
+        }
+
+        img{
+          padding-top: 50px;
+          padding-bottom: 50px;
+
+           @include tab{
+        }
+
+
+        }
+
+        .item_h3{
+          color:  rgb(65, 104, 165);
+          margin-bottom: 25px;
+          font-size: 23px;
+          font-weight: bold;
+
+          @include tab{
+            font-size: 20px;
+            margin-bottom: 20px;
+          }
+  
+          .recruite_explain{
+            color: rgb(90, 90, 90);
+          }
+
+          .yellow_line{
+            background: linear-gradient(transparent 70%, rgb(255, 215, 0) 0%);
+          }
+
+        }
+
+
+      }/*item*/
+
+    }/*recruitblock*/
+  }/*recruit*/
+
+
+
+  .product{
+    background-color: rgb(236, 245, 250);
+    padding-top: 115px;
+    
+
+    h2{
+      @include h2;
+      padding-bottom: 80px;
+    }
+
+    &_table{
+      width: 860px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      padding-bottom: 75px;
+
+      @include pc{
+        width: 740px;
+      }
+
+      @include tab{
+        width: 540px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      @include sp{
+        max-width: 560px;
+        width: 100%;
+      }
+
+
+
+      img{
+        width: 260px;
+        height: 272px;
+
+      }/*img*/
+    }/*table*/
+
+    .product_text_1{
+      background-image: url(../img/circle_1.png);
+      background-size: contain;
+      width: 260px;
+      height: 260px;
+      position :relative ;
+      text-align: center;
+
+      @include pc{
+        width: 230px;
+      }
+      
+      @include tab{
+        margin: 0 15px;
+      }
+
+      @include sp{
+        width: 200px;
+        height: 200px;  
+      }
+
+
+      @include sp-second(){
+        width: 140px;
+        height: 140px;  
+      }
+
+
+      h3{
+        position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  height: 7.2rem;
+  font-size: 24px;
+  color: rgb(65, 104, 165);
+
+  @include pc{
+    font-size: 22px;
+  }
+
+  @include sp{
+    font-size: 20px;
+    height: 6rem;
+  }
+
+  @include sp-second(){
+    font-size: 12px;
+    height: 3.4rem;
+  }
+
+  
+
+  }
+
+    }/*product_text*/
+
+
+    .product_text_2{
+      background-image: url(../img/circle_2.png);
+      background-size: contain;
+      width: 260px;
+      height: 260px;
+      position :relative ;
+      text-align: center;
+
+
+      @include pc{
+        width: 230px;
+      }
+
+      @include sp{
+        width: 200px;
+        height: 220px;  
+      }
+
+      @include sp-second(){
+        width: 140px;
+        height: 140px;  
+      }
+
+
+
+      h3{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  height: 9rem;
+  font-size: 24px;
+  color: rgb(65, 104, 165);
+
+  @include pc{
+    font-size: 22px;
+  }
+
+
+  @include sp{
+    font-size: 20px;
+    height: 7rem;
+  }
+
+  @include sp-second(){
+    font-size: 12px;
+    height: 4rem;
+  }
+
+
+
+      }
+
+    }/*product_text*/
+
+
+    .product_text_3{
+      background-image: url(../img/circle_3.png);
+      background-size: contain;
+      width: 260px;
+      height: 260px;
+      position :relative ;
+      text-align: center;
+
+
+      @include pc{
+        width: 230px;
+      }
+
+      @include sp{
+        width: 200px;
+        height: 220px;  
+      }
+
+      @include sp-second(){
+        width: 140px;
+        height: 140px;  
+      }
+
+
+
+      h3{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  height: 9rem;
+  font-size: 24px;
+  color: rgb(65, 104, 165);
+
+  @include pc{
+    font-size: 22px;
+  }
+
+  @include sp{
+    font-size: 20px;
+    height: 7rem;
+  }
+
+  @include sp-second(){
+    font-size: 12px;
+    height: 4rem;
+  }
+
+
+
+}
+
+    }/*product_text*/
+
+    .process{
+
+      .first_process{
+        text-align: center;
+        padding-bottom: 75px;
+
+      .process_title{
+        background-image: url(../img/title_1.png);
+        background-size: contain;
+        width: 840px;
+        height: 160px;
+        margin: 0 auto;
+        position: relative;
+
+        @include pc{
+          width: 740px;
+          background-size: contain;
+        }
+
+        @include tab{
+          width: 540px;
+        }
+
+        @include sp{
+          background-image: url(../img/sp_title_1.png);
+          width: 410px;
+          margin-bottom: 30px;
+        }
+
+        @include sp-second(){
+          width: 93%;
+        }
+
+        
+
+
+        h2{
+          position: absolute;
+          top: 73%;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          margin: auto;
+          height: 5.2rem;
+          color: white;
+          font-size: 30px;
+
+          @include pc{
+            font-size: 26px;
+            height: 7.2rem;
+          }
+
+          @include tab{
+            font-size: 20px;
+            height: 10.2rem;
+          }
+
+          @include sp{
+            height: 7.5rem;
+          }
+
+          .sp{
+            display: none;
+
+            @include sp(){
+              display: initial;
+            }
+          }
+
+          
+
+        }/*h2*/
+      }/*processtitle*/
+
+      p{
+        padding: 40px 0px;
+        color: rgb(90, 90, 90);
+        font-weight: bold;
+
+        @include tab{
+          padding-top: 0px;
+          font-size: 14px;
+        }
+
+
+        @include sp{
+          width: 60%;
+          margin: 0 auto;
+        }
+        @include sp-second(){
+          width: 312px;
+        }
+
+
+      }
+
+
+      .process_img_block{
+        display: flex;
+        width: 840px;
+        margin: 0 auto;
+        justify-content: space-between;
+
+        @include pc{
+          width: 740px;
+        }
+
+        @include tab{
+          width: 520px;
+        }
+
+        @include sp{
+          flex-direction: column;
+          width: 410px;
+        }
+
+        @include sp-second(){
+          width: 93%;
+        }
+
+
+
+
+        .situation{
+
+          width: 390px;
+          height: 297px;
+          
+          @include pc{
+            width: 320px;
+          }
+
+          @include tab{
+            width: 230px;
+          }
+
+          @include sp{
+            margin: 0 auto;
+          }
+
+
+          @include sp-second(){
+            width: 100%;
+          }
+
+          
+        }
+
+
+
+        .tryangle{
+          margin-top: 130px;
+          width: 27px;
+          height: 32px;
+
+          @include pc{
+            margin-top: 100px;
+          }
+
+            @include tab{
+              margin-top: 70px;
+            }
+
+
+          @include sp{
+            display: none;
+          }
+        }/**/
+
+        .sp_tryangle{
+          display: none;
+
+          @include sp{
+            display: initial;
+            width: 30px;
+            height: 28px;
+            margin: 0 auto;
+          }
+
+          @include sp-second(){
+            margin: 0 auto;
+            margin-top: 20px ;
+            margin-bottom:20px ;
+
+          }
+        }/**/
+
+
+
+      }/*process_img_block*/
+    }/*firstprocess*/
+
+
+    .second_process{
+      padding-bottom: 80px;
+      text-align: center;
+
+      .process_title{
+        background-image: url(../img/title_2.png);
+        background-size: contain;
+        width: 840px;
+        height: 160px;
+        margin: 0 auto;
+        position: relative;
+
+        @include pc{
+          width: 740px;
+          background-size: contain;
+        }
+
+        @include tab{
+          width: 540px;
+        }
+
+        @include sp{
+          background-image: url(../img/sp_title_2.png);
+          width: 410px;
+          margin-bottom: 30px;
+
+        }
+        @include sp-second(){
+          width: 93%;
+        }
+
+
+        h2{
+          position: absolute;
+          top: 73%;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          margin: auto;
+          height: 5.2rem;
+          color: white;
+          font-size: 30px;
+
+          @include pc{
+            font-size: 26px;
+            height: 7.2rem;
+          }
+
+          @include tab{
+            font-size: 20px;
+            height: 10.2rem;
+          }
+
+          @include sp{
+            height: 8rem;
+          }
+
+          .sp{
+            display: none;
+
+            @include sp(){
+              display: initial;
+            }
+          }
+
+        }/*h2*/
+      }/*process_title*/
+
+      p{
+        padding: 40px 0px;
+        color: rgb(90, 90, 90);
+        font-weight: bold;
+
+        @include tab{
+          padding-top: 0px;
+          font-size: 14px;
+        }
+
+
+        @include sp{
+          width: 60%;
+          margin: 0 auto;
+        }
+        @include sp-second(){
+          width: 312px;
+        }
+
+      }
+
+      .second_process_img{
+        width: 740px;
+
+        @include tab{
+          width: 540px;
+        }
+
+        @include sp(){
+          display: none;  
+        }
+
+        
+
+      }/*secondimg*/
+
+      .second_process_img_sp{
+        display: none;
+
+        @include sp{
+          display: initial;
+        }
+
+        @include sp-second{ 
+          width:92%;
+        }
+      }
+
+    }/*process*/
+
+    }/*second_process*/
+
+
+    .third_process{
+      padding-bottom: 80px;
+      text-align: center;
+
+
+
+      .process_title{
+        background-image: url(../img/title_3.png);
+        background-size: contain;
+        width: 840px;
+        height: 160px;
+        margin: 0 auto;
+        position: relative;
+
+        @include pc{
+          width: 740px;
+          background-size: contain;
+        }
+
+        @include tab{
+          width: 540px;
+        }
+
+        @include sp{
+          background-image: url(../img/sp_title_3.png);
+          width: 410px;
+          margin-bottom: 30px;
+
+        }
+
+        @include sp-second(){
+          width: 93%;
+        }
+
+
+        h2{
+          position: absolute;
+          top: 73%;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          margin: auto;
+          height: 5.2rem;
+          color: white;
+          font-size: 30px;
+
+          @include pc{
+            font-size: 26px;
+            height: 7.2rem;
+          }
+
+          @include tab{
+            font-size: 20px;
+            height: 10.2rem;
+          }
+
+          @include sp{
+            height: 8rem;
+          }
+
+          .sp{
+            display: none;
+
+            @include sp(){
+              display: initial;
+            }
+          }
+
+
+       
+
+        }/*h2*/
+      }/*process_title*/
+      p{
+        padding: 40px 0px;
+        color: rgb(90, 90, 90);
+        font-weight: bold;
+
+        @include tab{
+          padding-top: 0px;
+          font-size: 14px;
+        }
+
+
+        @include sp{
+          width: 60%;
+          margin: 0 auto;
+        }
+
+
+        @include sp-second(){
+          width: 312px;
+        }
+
+      }
+
+      .h2o{
+        padding-bottom: 35px;
+
+        @include pc{
+          width: 460px;
+        }
+
+        @include sp{
+          width: 340px;
+        }
+
+        @include sp{
+          width: 300px;
+        }
+
+      }/*h2o*/
+
+      .third_image_block{
+        width: 840px;
+        margin: 0 auto;
+        justify-content: space-around;
+        display: flex;
+
+        @include pc{
+          width: 740px;
+        }
+
+        @include tab{
+          width: 540px;
+        }
+
+
+        @include sp{
+          width: 410px;
+          flex-direction: initial;
+        }
+
+        @include sp-second(){
+          max-width: 425px;
+          width: 100%;
+          justify-content: space-around;
+        }
+
+
+        .third_img{
+          width: 410px;
+          
+
+          @include tab{
+            width: 260px;
+          }
+
+          @include sp{
+            margin-bottom: 20px;
+          }
+
+          @include sp{
+            width: 200px;
+          }
+
+          @include sp-second(){
+            width: 45vw;
+          }
+
+        }/*third_img*/
+
+      }
+
+      h3{
+        color: rgb(65, 104, 165);
+        padding-top: 30px;
+        font-size: 25px;
+        font-weight: bold;
+
+        .sp_br{
+          display: none;
+          @include sp-second(){
+            display: initial;
+          }
+        }
+
+      }
+
+     
+    }/*third_process*/
+  }/*product*/
+
+
+
+
+
+    .contact_box{
+      padding-top: 120px;
+      padding-bottom: 120px;
+
+      @include sp{
+        padding-top: 50px;
+        padding-bottom: 50px;  
+      }
+        
+        h2{
+            text-align: center;
+            margin-bottom: 75px;
+            color: rgb(90, 90, 90);
+            font-weight: bold;
+
+            @include pc{
+              font-size: 22px;
+            }
+
+            @include tab{
+              font-size: 3vw;
+            }
+
+            @include sp{
+              font-size: 23px;
+              margin-bottom: 50px;
+            }
+
+            @include sp-second(){
+              font-size: 18px;
+            }
+
+            span{
+              background: linear-gradient(transparent 60%, rgb(255, 215, 0) 0%);
+            }
+
+            .sp{
+              display: none;
+              @include sp{
+                display: initial;
+              }
+
+            }/*sp*/
+
+
+            span{
+            }
+
+
+        }/*h2*/
+
+        .btn_wrapper{
+            display: flex;
+            width: 780px;
+            justify-content: space-between;
+            margin: 0 auto;
+
+            @include pc{
+              width: 690px;
+            }
+
+            @include tab{
+              width: 540px;
+              display: block;
+            }
+
+            @include sp{
+              width: 410px;
+            }
+
+            @include sp-second(){
+              width: 100%;
+            }
+
+
+            .btn_box{
+                text-align: center;
+
+
+            #fc_info{
+              background-image: url(../img/slash.png);
+              background-position: center;
+                color: rgb(65, 104, 165);
+            }
+
+            #more_info{
+                color: rgb(65, 151, 198);
+                background-image: url(../img/slash_2.png);
+                background-position: center;  
+            }
+
+            .btn_type{
+                margin-bottom: 14px;
+                font-size: 14px;
+                font-weight: bold;
+
+                @include sp-second(){
+                  margin-bottom: 10px;
+                }
+
+            }/*type*/
+
+
+            #btn_first{
+                background-color:  rgb(65, 104, 165);
+            }
+
+            #btn_second{
+                background-color: rgb(65, 151, 198);
+            }
+
+            .btn{
+                width: 375px;
+                text-align: center;
+                border-radius: 7.5px;
+                box-shadow: 2px 2px 6px rgb(187, 187, 187);
+
+                @include pc{
+                  width: 330px;
+                }
+
+                @include tab{
+                  margin: 0 auto;
+                  margin-bottom: 30px;
+                  width: 430px;
+                }
+
+                @include sp{
+                  width: 410px;
+                }
+
+                @include sp-second(){
+                  width: 92%;
+                }
+
+                a{
+                    display: block;  
+                    width: 100%;
+                    font-size: 18px;
+                    padding: 30px 0;
+                    color: white;
+                    font-weight: bold;
+                    font-family: 'Noto Sans JP', sans-serif;
+                    letter-spacing: 3px;
+                }
+            }
+
+            .btn:hover{
+              opacity: 0.9;
+              transition: .5s;
+              
+              a:hover{
+                opacity: 0.7;
+                transition: .5s;
+              }
+        
+            }
+
+        }/*box*/
+
+        }/*wrapper*/
+    }
+
+
+
+
+
+
+
+
+
+    
+.point{
+  background-color: rgb(236, 244, 248);
+  padding-top: 120px;
+  padding-bottom: 130px;
+
+  
+  h2{
+   @include h2();
+   padding-bottom: 90px;
+
+   @include sp{
+     font-size: 38px;
+   }
+
+   @include sp-second(){
+    font-size: 25px;
+  }
+
+  }/*h2*/
+
+  #point_top{
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    width: 840px;
+    margin-bottom: 75px;
+
+    @include pc{
+      width: 740px;
+    }
+
+    @include tab{
+      width: 540px;
+    }
+
+    @include sp{
+      width: 410px;
+    }
+
+    @include sp-second(){
+      width: 300px;
+    }
+
+    .text_box{
+      width: 410px;
+
+
+      @include tab{
+        width: 260px;
+      }
+
+      h3{
+        color: rgb(65, 104, 165);
+        font-size: 32px;
+        margin-bottom: 40px;
+
+        @include tab{
+          font-size: 20px;
+       }
+
+        @include sp{
+          text-align: center;
+          margin-bottom: 20px;
+    }
+
+
+      }/*h3*/
+
+      p{
+        font-size: 16px;
+        color: rgb(90, 90, 90);
+        font-weight: bold;
+        line-height: 2rem;
+
+        @include tab{
+          font-size: 14px;
+       }
+
+
+      }
+
+    }/*textbox*/
+
+    img{
+      width: 395px;
+      height: 225px;
+      border-radius: 15px;
+
+      @include tab{
+        width: 260px;
+        height:200px;
+      }
+
+      @include sp{
+        display: none;
+      }
+
+    }/*img*/
+
+  }/*point_top*/
+
+  #point_table{
+    width: 840px;
+    margin: 0 auto;
+
+    @include pc{
+      width: 740px;
+    }
+
+    @include tab{
+      width: 540px;
+    }
+
+    @include sp{
+      max-width: 410px;
+      width: 95%;
+    }
+
+
+
+
+    h2{
+      background-color: rgb(65, 104, 165);
+      border-top-left-radius: 25px;
+      border-top-right-radius: 25px;
+      color: white;
+      font-size: 32px;
+      height: 80px;
+      line-height: 80px;
+
+      @include tab{
+        font-size: 27px;
+        height: 120px;
+        line-height: 60px;
+      }
+
+      @include sp{
+        font-size: 22px;
+        line-height: 40px;
+        padding-top: 15px;
+      }
+
+      
+
+
+      .tab{
+        display: none;
+        
+        @include tab{
+          display: initial;
+        }
+
+      }
+
+      span{
+        color: rgb(255, 215, 0);
+        font-size: 42px;
+      }
+
+    }/*h2*/
+
+    .point_box_wrap{
+      background-color: white;
+      padding-bottom: 27px;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+
+    .point_box{
+      display: flex;
+      justify-content: space-around;
+      margin: 0 auto;
+      padding-top: 25px;
+
+      @include tab{
+        display: block;
+        margin: 0 auto;
+      }
+  
+
+      .img_box{
+        display: flex;
+        background-color: rgb(255, 215, 0);
+        border-radius: 10px;
+        width: 290px;
+        height: 124px;
+
+      @include tab{
+        margin: 0 auto;
+        width: 340px;
+      }
+
+  
+      @include sp-second(){
+        max-width: 340px;
+        width: 95%;
+        height: 100px;
+      }
+
+
+
+      img{
+      width: 85px;
+      height: 60px;
+      margin-left: 30px;
+      margin-top: 30px;
+
+      @include tab{
+        margin-left: 60px;
+      }
+
+      @include sp-second(){
+        margin-top: 20px;
+        margin-left: 50px;
+      }
+
+      }/*img*/
+
+      h3{
+        color: rgb(65, 104, 165);
+        text-align: center;
+        margin-top: 35px;
+        margin-left: 20px;
+
+        @include sp-second(){
+          margin-top: 25px;
+        }
+
+      }
+
+
+      }/*imgbox*/
+      
+      p{
+        width: 412px;
+        font-size: 18px;
+        color: rgb(90, 90, 90);
+        font-weight: bold;
+        line-height: 1.5em;
+        margin-top: 20px;
+
+
+      @include tab{
+        margin: 0 auto;
+        width: 340px;
+        padding-top: 15px;
+      }
+
+      @include sp-second(){
+        max-width: 340px;
+        width: 95%;
+        font-size: 14px;
+      }
+
+
+
+      }
+
+    }/*point_box*/
+
+  }/*wrap*/
+
+
+  }/*table*/
+
+  .point_bottom_title{
+    @include h2();
+    padding-bottom: 50px;
+    padding-top: 120px;
+
+    @include sp{
+      font-size: 38px;
+    }
+
+    @include sp-second(){
+      font-size: 22px;
+      padding-top: 60px;
+    }
+
+  }
+
+  .bubble_wrap{
+    width: 837px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+
+    @include pc{
+      width: 750px;
+    }
+
+    @include tab{
+      width: 540px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    @include sp{
+      display: block;
+      max-width: 400px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+
+    #bubble{
+      margin: 0 15px;
+      max-width: 160px;
+      height: 143px;
+      font-size: 25px;
+      line-height: 1.4em;
+      font-weight: bold;
+      padding-top: 40px;
+      color: rgb(65, 104, 160);
+      width: 100%;
+      letter-spacing: 0em;
+      padding-right: 0px;
+      padding-left: 0px;
+
+      @include pc{
+        max-width: 130px;
+        font-size: 20px;
+        height: 130px;
+      }
+
+      @include sp{
+        border-radius: 10px;
+        height: 70px;
+        max-width: 350px;
+        margin: 0 auto;
+        margin-bottom: 30px;
+        line-height: 0.1em;
+        padding-top: 35px;
+      }
+
+      br{
+        @include sp{
+          display: none;
+        }
+      }
+
+    }
+
+
+    .bubble_1{
+      position: relative;
+      padding: 20px;
+      width: 80px;
+      height: 80px;
+      line-height: 80px;
+      border-radius: 50%;
+      text-align: center;
+      color: #ffffff;
+      letter-spacing: 0.2em;
+      font-size: 14px;
+      background-color: #ffffff;
+    }
+    .bubble_1::before{
+      content: '';
+      position: absolute;
+      display: block;
+      width: 0;
+      height: 0;
+      right: -15px;
+      top: 65px;
+      border-left: 20px solid white;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      transform: rotate(0deg);
+
+      @include sp{
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: -20px;
+        left: 0;
+        width: 0px;
+        height: 0px;
+        margin: auto;
+        border-style: solid;
+        border-color: white transparent transparent transparent;
+        border-width: 20px 20px 0 20px;
+      }
+    }
+
+    .bubble_2{
+      position: relative;
+      padding: 20px;
+      width: 80px;
+      height: 80px;
+      line-height: 80px;
+      border-radius: 50%;
+      text-align: center;
+      color: #ffffff;
+      letter-spacing: 0.2em;
+      font-size: 14px;
+      background-color: #ffffff;
+    }
+    .bubble_2::before{
+      content: '';
+      position: absolute;
+      display: block;
+      width: 0;
+      height: 0;
+      right: -15px;
+      top: 65px;
+      border-left: 20px solid white;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      transform: rotate(0deg);
+
+      @include sp{
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: -20px;
+        left: 0;
+        width: 0px;
+        height: 0px;
+        margin: auto;
+        border-style: solid;
+        border-color: white transparent transparent transparent;
+        border-width: 20px 20px 0 20px;
+      }
+    }
+    
+
+    .bubble_3{
+      position: relative;
+      padding: 20px;
+      width: 80px;
+      height: 80px;
+      line-height: 80px;
+      border-radius: 50%;
+      text-align: center;
+      color: #ffffff;
+      letter-spacing: 0.2em;
+      font-size: 14px;
+      background-color: #ffffff;
+    }
+    .bubble_3::before{
+      content: '';
+      position: absolute;
+      display: block;
+      width: 0;
+      height: 0;
+      right: -15px;
+      top: 65px;
+      border-left: 20px solid white;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      transform: rotate(0deg);
+
+      @include sp{
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: -20px;
+        left: 0;
+        width: 0px;
+        height: 0px;
+        margin: auto;
+        border-style: solid;
+        border-color: white transparent transparent transparent;
+        border-width: 20px 20px 0 20px;
+      }
+    }
+
+    .bubble_4{
+      position: relative;
+      padding: 20px;
+      width: 80px;
+      height: 80px;
+      line-height: 80px;
+      border-radius: 50%;
+      text-align: center;
+      color: #ffffff;
+      letter-spacing: 0.2em;
+      font-size: 14px;
+      background-color: #ffffff;
+    }
+    .bubble_4::before{
+      content: '';
+      position: absolute;
+      display: block;
+      width: 0;
+      height: 0;
+      right: -15px;
+      top: 65px;
+      border-left: 20px solid white;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      transform: rotate(0deg);
+
+   @include sp{
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: -20px;
+        left: 0;
+        width: 0px;
+        height: 0px;
+        margin: auto;
+        border-style: solid;
+        border-color: white transparent transparent transparent;
+        border-width: 20px 20px 0 20px;
+      }
+    }
+    
+
+    .bubble_5{
+      position: relative;
+      padding: 20px;
+      width: 80px;
+      height: 80px;
+      line-height: 70px!important;
+      border-radius: 50%;
+      text-align: center;
+      color: #ffffff;
+      letter-spacing: 0.2em;
+      font-size: 14px;
+      background-color: rgb(255, 215, 0);
+
+      @include sp{
+        line-height: 0px!important;
+      }
+
+    }
+   
+    
+
+  }
+
+
+
+}/*point*/
+
+
+.question{
+  padding-top: 125px;
+  background-color: rgb(236, 244, 248);
+  background-image: url(../img/background.png);
+  background-position: center;
+  padding-bottom: 120px;
+
+  @include sp{
+    padding-bottom: 53px;
+    padding-top: 53px;
+  }
+  
+  h2{
+    @include h2();
+
+
+    @include sp{
+      font-size: 38px;
+    }
+
+    @include sp-second(){
+      font-size: 22px;
+    }
+
+  }/*h2*/
+
+  &_block{
+    width: 650px;
+    margin: 0 auto;
+    margin-top: 40px;
+
+    @include tab(){
+      width: 540px;
+    }
+
+    @include sp{
+      width: 90%;
+    }
+
+    h3{
+      color: rgb(65, 104, 160);
+      font-size: 24px;
+      font-weight: bold;
+      line-height: 2;
+
+      @include sp{
+        font-size: 20px;
+      }
+
+      @include sp-second(){
+        font-size: 15px;
+      }
+
+
+    }/*h3*/
+
+    p{
+      font-size: 14px;
+      font-weight: 600;
+      color: rgb(90, 90, 90);
+      letter-spacing: 0.1em;
+
+    
+    }
+
+  }/*block*/
+
+}/*question*/
+
+
+.footer{
+  height: 115px;
+
+
+  &_wrapper{
+    display: flex;
+    width: 700px;
+    margin: 0 auto;
+    justify-content: space-between;
+
+    @include tab{
+      display: block;
+      width: 540px;
+      text-align: center;
+      margin-top: 70px;
+    }
+   
+
+    @include sp{
+      width: 100%;
+    }
+  
+    h3{
+      font-size: 18px;
+      color: rgb(90, 90, 90);
+      letter-spacing: 0.08em;
+      margin-top: 42.5px;
+
+      @include tab{
+        margin-top: 0px;
+        font-size: 16px;
+        width: 540px;
+        margin: 0 auto;
+      }
+
+
+    @include sp{
+      width: 100%;
+    }
+  
+
+      
+    }
+  }/*wrraper*/
+}/*footer*/
+
+
+
+
+}/*body*/
+}/*html*/
