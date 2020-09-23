@@ -1792,6 +1792,7 @@ html body .contact_box .btn_wrapper .btn_box .btn {
 @media (max-width: 425px) {
   html body .contact_box .btn_wrapper .btn_box .btn {
     width: 92%;
+    height: 70px;
   }
 }
 
@@ -1804,6 +1805,13 @@ html body .contact_box .btn_wrapper .btn_box .btn a {
   font-weight: bold;
   font-family: 'Noto Sans JP', sans-serif;
   letter-spacing: 3px;
+}
+
+@media (max-width: 425px) {
+  html body .contact_box .btn_wrapper .btn_box .btn a {
+    padding: 22px 0;
+    font-size: 16px;
+  }
 }
 
 html body .contact_box .btn_wrapper .btn_box .btn:hover {
