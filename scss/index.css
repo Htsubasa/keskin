@@ -567,12 +567,13 @@ html body .recruit h2 {
 @media (max-width: 560px) {
   html body .recruit h2 {
     font-size: 30px;
+    margin-bottom: 15px;
   }
 }
 
 @media (max-width: 425px) {
   html body .recruit h2 {
-    font-size: 21px;
+    font-size: 23px;
   }
 }
 
@@ -588,6 +589,7 @@ html body .recruit h3 {
 @media (max-width: 560px) {
   html body .recruit h3 {
     font-size: 20px;
+    margin-bottom: 40px;
   }
 }
 
@@ -621,17 +623,22 @@ html body .recruit .fc_title {
   font-size: 30px;
   font-weight: 800;
   color: white;
+  background-image: url(../img/slash_white.png);
+  background-position: center;
+  background-size: 600px;
 }
 
 @media (max-width: 560px) {
   html body .recruit .fc_title {
     font-size: 20px;
+    background-size: 400px;
   }
 }
 
 @media (max-width: 425px) {
   html body .recruit .fc_title {
-    font-size: 15px;
+    font-size: 18px;
+    background-size: 340px;
   }
 }
 
@@ -696,6 +703,12 @@ html body .recruit_block .recruit_item img {
   padding-bottom: 50px;
 }
 
+@media (max-width: 560px) {
+  html body .recruit_block .recruit_item img {
+    padding-bottom: 40px;
+  }
+}
+
 html body .recruit_block .recruit_item .item_h3 {
   color: #4197c6;
   margin-bottom: 25px;
@@ -731,6 +744,12 @@ html body .product {
   /*third_process*/
 }
 
+@media (max-width: 560px) {
+  html body .product {
+    padding-top: 50px;
+  }
+}
+
 html body .product h2 {
   color: #4168a5;
   text-align: center;
@@ -738,6 +757,13 @@ html body .product h2 {
   font-family: 'Noto Sans JP', sans-serif;
   font-weight: 900;
   padding-bottom: 80px;
+}
+
+@media (max-width: 560px) {
+  html body .product h2 {
+    font-size: 25px;
+    padding-bottom: 30px;
+  }
 }
 
 html body .product_table {
@@ -775,6 +801,7 @@ html body .product_table {
   html body .product_table {
     max-width: 560px;
     width: 100%;
+    padding-bottom: 45px;
   }
 }
 
@@ -1587,7 +1614,7 @@ html body .contact_box h2 {
   text-align: center;
   margin-bottom: 75px;
   color: #5a5a5a;
-  font-weight: bold;
+  font-weight: 800;
   /*sp*/
 }
 
@@ -1771,6 +1798,12 @@ html body .point {
   /*table*/
 }
 
+@media (max-width: 560px) {
+  html body .point {
+    padding-top: 53px;
+  }
+}
+
 html body .point h2 {
   color: #4168a5;
   text-align: center;
@@ -1783,6 +1816,7 @@ html body .point h2 {
 @media (max-width: 560px) {
   html body .point h2 {
     font-size: 38px;
+    padding-bottom: 50px;
   }
 }
 
@@ -1820,13 +1854,21 @@ html body .point #point_top {
 
 @media (max-width: 560px) {
   html body .point #point_top {
+    text-align: center;
     width: 410px;
   }
 }
 
 @media (max-width: 425px) {
   html body .point #point_top {
-    width: 300px;
+    max-width: 424px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 425px) {
+  html body .point #point_top {
+    max-width: 425px;
   }
 }
 
@@ -1838,6 +1880,19 @@ html body .point #point_top .text_box {
 @media (max-width: 768px) {
   html body .point #point_top .text_box {
     width: 260px;
+  }
+}
+
+@media (max-width: 560px) {
+  html body .point #point_top .text_box {
+    width: 100%;
+  }
+}
+
+@media (max-width: 425px) {
+  html body .point #point_top .text_box {
+    width: 95%;
+    margin: 0 auto;
   }
 }
 
@@ -1870,6 +1925,20 @@ html body .point #point_top .text_box p {
 @media (max-width: 768px) {
   html body .point #point_top .text_box p {
     font-size: 14px;
+  }
+}
+
+@media (max-width: 560px) {
+  html body .point #point_top .text_box p {
+    text-align: left;
+  }
+}
+
+@media (max-width: 425px) {
+  html body .point #point_top .text_box p {
+    width: 95%;
+    margin: 0 auto;
+    text-align: left;
   }
 }
 
@@ -2087,7 +2156,7 @@ html body .point .point_bottom_title {
 
 @media (max-width: 425px) {
   html body .point .point_bottom_title {
-    font-size: 22px;
+    font-size: 25px;
     padding-top: 60px;
   }
 }
@@ -2403,7 +2472,7 @@ html body .question h2 {
 
 @media (max-width: 425px) {
   html body .question h2 {
-    font-size: 22px;
+    font-size: 25px;
   }
 }
 
