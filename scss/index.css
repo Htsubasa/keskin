@@ -524,7 +524,7 @@ html body .mainvisual_wrap h1 .yellow_title {
 
 @media (max-width: 560px) {
   html body .mainvisual_wrap h1 .yellow_title {
-    font-size: 12.5vw;
+    font-size: 11vw;
   }
 }
 
@@ -720,7 +720,7 @@ html body .recruit_block .recruit_item .item_h3 {
   color: #4197c6;
   margin-bottom: 25px;
   font-size: 23px;
-  font-weight: bold;
+  font-weight: 900;
 }
 
 @media (max-width: 768px) {
@@ -1636,6 +1636,7 @@ html body .contact_box {
   html body .contact_box {
     padding-top: 50px;
     padding-bottom: 50px;
+    line-height: 1.8em;
   }
 }
 
@@ -1974,7 +1975,7 @@ html body .point #point_top .text_box p {
 
 @media (max-width: 425px) {
   html body .point #point_top .text_box p {
-    width: 95%;
+    width: 98%;
     margin: 0 auto;
     text-align: left;
   }
@@ -2145,6 +2146,12 @@ html body .point #point_table .point_box_wrap .point_box .img_box h3 {
   margin-left: 20px;
 }
 
+@media (max-width: 560px) {
+  html body .point #point_table .point_box_wrap .point_box .img_box h3 {
+    margin-left: 30px;
+  }
+}
+
 @media (max-width: 425px) {
   html body .point #point_table .point_box_wrap .point_box .img_box h3 {
     margin-top: 25px;
@@ -2196,6 +2203,7 @@ html body .point .point_bottom_title {
   html body .point .point_bottom_title {
     font-size: 25px;
     padding-top: 60px;
+    padding-bottom: 30px;
   }
 }
 

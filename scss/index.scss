@@ -372,7 +372,7 @@ body{
           color:  rgb(65, 151, 198);
           margin-bottom: 25px;
           font-size: 23px;
-          font-weight: bold;
+          font-weight: 900;
 
           @include tab{
             font-size: 20px;
@@ -1151,6 +1151,7 @@ body{
       @include sp{
         padding-top: 50px;
         padding-bottom: 50px;  
+        line-height: 1.8em;
       }
         
         h2{
@@ -1428,7 +1429,7 @@ body{
 
 
        @include sp-second(){
-        width: 95%;
+        width: 98%;
         margin: 0 auto;
         text-align: left;
       }
@@ -1578,6 +1579,10 @@ body{
         margin-top: 35px;
         margin-left: 20px;
 
+        @include sp(){
+          margin-left: 30px;
+        }
+
         @include sp-second(){
           margin-top: 25px;
         }
@@ -1631,6 +1636,7 @@ body{
     @include sp-second(){
       font-size: 25px;
       padding-top: 60px;
+      padding-bottom: 30px;
     }
 
   }
