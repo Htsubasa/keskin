@@ -555,6 +555,13 @@ html body .recruit {
   /*recruitblock*/
 }
 
+@media (max-width: 560px) {
+  html body .recruit {
+    background-image: url(../img/sp_bubble.png);
+    padding-top: 155px;
+  }
+}
+
 html body .recruit h2 {
   font-size: 40px;
   color: gold;

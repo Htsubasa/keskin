@@ -229,6 +229,11 @@ body{
     text-align: center;
     padding-top:90px;
 
+    @include sp{
+      background-image: url(../img/sp_bubble.png);
+      padding-top:155px;
+    }
+
    
 
     h2{
