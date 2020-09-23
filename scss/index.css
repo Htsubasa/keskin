@@ -1045,6 +1045,7 @@ html body .product .process .first_process .process_title {
 @media (max-width: 425px) {
   html body .product .process .first_process .process_title {
     width: 93%;
+    height: 150px;
   }
 }
 
@@ -1077,6 +1078,13 @@ html body .product .process .first_process .process_title h2 {
 @media (max-width: 560px) {
   html body .product .process .first_process .process_title h2 {
     height: 7.5rem;
+  }
+}
+
+@media (max-width: 425px) {
+  html body .product .process .first_process .process_title h2 {
+    height: 8.5rem;
+    font-size: 5.4vw;
   }
 }
 
@@ -1307,6 +1315,13 @@ html body .product .process .second_process .process_title h2 {
   }
 }
 
+@media (max-width: 425px) {
+  html body .product .process .second_process .process_title h2 {
+    height: 10rem;
+    font-size: 5.4vw;
+  }
+}
+
 html body .product .process .second_process .process_title h2 .sp {
   display: none;
 }
@@ -1448,6 +1463,13 @@ html body .product .third_process .process_title h2 {
 @media (max-width: 560px) {
   html body .product .third_process .process_title h2 {
     height: 8rem;
+  }
+}
+
+@media (max-width: 425px) {
+  html body .product .third_process .process_title h2 {
+    height: 10rem;
+    font-size: 5.4vw;
   }
 }
 
@@ -1801,6 +1823,7 @@ html body .point {
 @media (max-width: 560px) {
   html body .point {
     padding-top: 53px;
+    padding-bottom: 50px;
   }
 }
 
@@ -2570,6 +2593,7 @@ html body .footer_wrapper h3 {
 
 @media (max-width: 560px) {
   html body .footer_wrapper h3 {
+    font-size: 4vw;
     width: 100%;
   }
 }

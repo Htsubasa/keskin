@@ -651,6 +651,7 @@ body{
 
         @include sp-second(){
           width: 93%;
+          height: 150px;
         }
 
         
@@ -680,6 +681,12 @@ body{
           @include sp{
             height: 7.5rem;
           }
+
+          @include sp-second(){
+            height: 8.5rem;
+            font-size: 5.4vw;
+          }
+
 
           .sp{
             display: none;
@@ -870,6 +877,11 @@ body{
             height: 8rem;
           }
 
+          @include sp-second(){
+            height: 10rem;
+            font-size: 5.4vw;
+          }
+
           .sp{
             display: none;
 
@@ -993,6 +1005,12 @@ body{
           @include sp{
             height: 8rem;
           }
+
+          @include sp-second(){
+            height: 10rem;
+            font-size: 5.4vw;
+          }
+
 
           .sp{
             display: none;
@@ -1300,6 +1318,7 @@ body{
 
   @include sp{
     padding-top: 53px;
+    padding-bottom: 50px;
   }
 
   
@@ -1969,6 +1988,7 @@ body{
 
 
     @include sp{
+      font-size: 4vw;
       width: 100%;
     }
   
