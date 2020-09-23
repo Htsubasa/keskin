@@ -407,6 +407,7 @@ html body header .inner .btn a {
   width: 100%;
   font-size: 18px;
   color: white;
+  font-weight: bold;
 }
 
 @media (max-width: 768px) {
@@ -480,6 +481,8 @@ html body .mainvisual_wrap {
 html body .mainvisual_wrap h1 {
   font-size: 36px;
   color: white;
+  font-weight: 800;
+  margin-bottom: 20px;
   /*title*/
 }
 
@@ -558,6 +561,7 @@ html body .recruit h2 {
   border-bottom: 5px solid gold;
   display: inline-block;
   margin-bottom: 30px;
+  font-weight: 800;
 }
 
 @media (max-width: 560px) {
@@ -577,6 +581,8 @@ html body .recruit h3 {
   font-weight: bold;
   color: white;
   margin-bottom: 50px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
 }
 
 @media (max-width: 560px) {
@@ -613,7 +619,7 @@ html body .recruit .logo-en {
 
 html body .recruit .fc_title {
   font-size: 30px;
-  font-weight: bold;
+  font-weight: 800;
   color: white;
 }
 
@@ -680,7 +686,7 @@ html body .recruit_block .recruit_item {
 }
 
 html body .recruit_block .recruit_item .sub-line {
-  color: #4168a5;
+  color: #4197c6;
   font-size: 14px;
   font-weight: bold;
 }
@@ -691,7 +697,7 @@ html body .recruit_block .recruit_item img {
 }
 
 html body .recruit_block .recruit_item .item_h3 {
-  color: #4168a5;
+  color: #4197c6;
   margin-bottom: 25px;
   font-size: 23px;
   font-weight: bold;
@@ -704,13 +710,14 @@ html body .recruit_block .recruit_item .item_h3 {
   }
 }
 
-html body .recruit_block .recruit_item .item_h3 .recruite_explain {
-  color: #5a5a5a;
-}
-
 html body .recruit_block .recruit_item .item_h3 .yellow_line {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(70%, transparent), color-stop(0%, gold));
   background: linear-gradient(transparent 70%, gold 0%);
+}
+
+html body .recruit_block .recruit_item .recruite_explain {
+  color: #5a5a5a;
+  font-weight: 700;
 }
 
 html body .product {
